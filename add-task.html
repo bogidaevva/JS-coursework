@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/add-task.css">
+    <title>Добавить задачу</title>
+</head>
+
+<body>
+    <section>
+        <h2>Добавление задачи</h2>
+        <span class="form-message">message to user</span>
+        <form action="#" method="POST" novalidate>
+            <div>
+                <label for="title">Название задачи</label>
+                <input type="text" id="title" name="title" placeholder="Введите название задачи" required minlength="1"
+                    maxlength="20" onkeyup="this.value=this.value.replace(/^\s/,'')">
+                <p class="message">message to user</p>
+            </div>
+            <div>
+                <label for="description">Описание задачи</label>
+                <textarea name="description" id="description" cols="70" rows="1" wrap="soft"
+                    placeholder="Введите описание задачи" required minlength="5" maxlength="100"
+                    onkeyup="this.value=this.value.replace(/^\s/,'')"></textarea>
+                <p class="message">message to user</p>
+            </div>
+            <div>
+                <label for="datetime">Срок выполнения задачи</label>
+                <input type="datetime-local" id="datetime" name="datetime">
+                <p class="message">message to user</p>
+            </div>
+            <button type="submit">добавить задачу</button>
+        </form>
+    </section>
+
+    <script src="js/add-task.js"></script>
+</body>
+
+</html>
